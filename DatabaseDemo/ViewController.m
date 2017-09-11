@@ -52,6 +52,7 @@
         }
         NSLog(@"数据库创建成功");
     }
+    
 }
 
 #pragma mark - - 插入数据
@@ -129,7 +130,7 @@
 
     }
 }
-
+/* 清空数据库 */
 - (IBAction)clearData:(id)sender {
     
     if ([_database open]) {
@@ -142,6 +143,7 @@
         NSLog(@"清空成功");
     }
 }
+/* 多线程 */
 - (void)multipleThreadAction {
     {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -170,6 +172,7 @@
   
     }
 }
+
 /* 销毁表 */
 - (IBAction)dropTable:(id)sender {
     if ([_database open]) {
